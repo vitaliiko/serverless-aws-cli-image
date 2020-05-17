@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 docker run --rm -it \
-	-v "$(pwd)"/serverless-config:/app \
+	-v "$(pwd)"/serverless-config:/app/serverless \
 	--env-file serverless-properties.env \
 	vitaliikobrin/serverless \
-	serverless deploy --verbose --force --region eu-central-1 --stage dev
+	bash -c "ls -l && ./deploy-serverless.sh"

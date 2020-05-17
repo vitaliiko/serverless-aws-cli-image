@@ -12,4 +12,6 @@ RUN npm install -g serverless
 
 WORKDIR app
 
+COPY scripts .
+
 CMD serverless
